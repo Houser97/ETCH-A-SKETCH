@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    background-color: red;
+    margin: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContainer {
+    display: flex;
+    width: 1100px;
+    height: 370px;
+    flex-wrap: wrap;
+    background-color: white;
+}
