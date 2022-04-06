@@ -13,4 +13,11 @@ body {
     height: 370px;
     flex-wrap: wrap;
     background-color: white;
+    gap: 0;
+}
+
+.pixel {
+    background-color: rgb(250, 225, 4);
+    margin: 0;
+    border: 0;
 }
