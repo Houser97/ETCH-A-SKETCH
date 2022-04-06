@@ -10,7 +10,7 @@ body, html {
 
 .mainContainer {
     display: flex;
-    width: 900px;
+    width: 600px;
     height: 370px;
     flex-wrap: wrap;
     background-color: white;
