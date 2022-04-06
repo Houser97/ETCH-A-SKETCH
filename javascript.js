@@ -28,10 +28,5 @@ function paintBlack(event) {
     event.target.classList.add('black');
 }
 
-function removeColor(event) {
-    event.target.classList.remove('black');
-}
-
 const pixel = document.querySelectorAll('.pixel');
 pixel.forEach(container => container.addEventListener('mouseover', paintBlack));
-pixel.forEach(container => container.addEventListener('mouseout', removeColor));

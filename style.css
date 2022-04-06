@@ -1,9 +1,10 @@
-body {
+body, html {
     display: flex;
     background-color: red;
+    flex-direction: column;
     margin: 0;
     height: 100vh;
-    justify-content: center;
+    
     align-items: center;
 }
 
@@ -26,4 +27,17 @@ body {
 
 .black {
     background-color: black;
+}
+
+.reset {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px 40px;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px black solid;
+    border-radius: 5%;
+    box-shadow: inset;
+    
 }
