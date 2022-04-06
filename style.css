@@ -9,15 +9,21 @@ body {
 
 .mainContainer {
     display: flex;
-    width: 1100px;
+    width: 900px;
     height: 370px;
     flex-wrap: wrap;
     background-color: white;
     gap: 0;
+    padding: 0;
+    border: 0;
 }
 
 .pixel {
-    background-color: rgb(250, 225, 4);
+    background-color: white;
     margin: 0;
     border: 0;
+}
+
+.black {
+    background-color: black;
 }

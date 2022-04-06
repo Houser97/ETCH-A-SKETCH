@@ -4,23 +4,34 @@ function createContainers() {
     let heightMainCont = mainContainer.offsetHeight;
     let widthMainCont = mainContainer.offsetWidth;
 
-    let desiredVerticalEdge = 64;
-    let desiredHorizontalEdge = 64;
+    // Por cambiar
+    let numPixels = 64;
+    let desiredVerticalEdge = numPixels;
+    let desiredHorizontalEdge = numPixels;
 
     let desiredArea = desiredHorizontalEdge * desiredVerticalEdge;
-    let a = 0;
+    let pixelHeight = 100*(heightMainCont/desiredVerticalEdge)/100;
+    let pixelWidth = 100*(widthMainCont/desiredHorizontalEdge)/100;
 
     for(let i = 1; i<=desiredArea; i++){
         const div = document.createElement('div');
         div.classList.add('pixel');
-        div.style.height = `${heightMainCont/desiredVerticalEdge}px`;
-        div.style.width = `${widthMainCont/desiredHorizontalEdge}px`;
+        div.style.height = `${pixelHeight}px`;
+        div.style.width = `${pixelWidth}px`;
         mainContainer.appendChild(div);
-        ++a;
     }
-    return a;
-
-
 }
 
-console.log(createContainers());
+createContainers();
+
+function paintBlack(event) {
+    event.target.classList.add('black');
+}
+
+function removeColor(event) {
+    event.target.classList.remove('black');
+}
+
+const pixel = document.querySelectorAll('.pixel');
+pixel.forEach(container => container.addEventListener('mouseover', paintBlack));
+pixel.forEach(container => container.addEventListener('mouseout', removeColor));
