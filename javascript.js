@@ -4,7 +4,6 @@ function createContainers(mainContainer) {
 
     let heightMainCont = mainContainer.offsetHeight;
     let widthMainCont = mainContainer.offsetWidth;
-
     
     let numPixels = parseInt(prompt('Hi! Please enter the number of pixels you want in each side. \n Be careful, 100 is the max number you can enter.'),10);
 
@@ -32,13 +31,19 @@ function paintBlack(event) {
     event.target.classList.add('black');
 }
 
-function cleanSlate(event){
+function cleanSlate(){
+    
     const mainContainer = document.querySelector('.mainContainer');
     let firstElement = mainContainer.firstElementChild;
+    let keepGoing = true;
 
-    while(firstElement) {
+    while(keepGoing) {
         firstElement.remove();
         firstElement = mainContainer.firstElementChild;
+        
+        if(firstElement == null){
+            keepGoing = false;
+        }
     }
     createContainers(mainContainer); 
 }
