@@ -4,9 +4,18 @@ function createContainers(mainContainer) {
 
     let heightMainCont = mainContainer.offsetHeight;
     let widthMainCont = mainContainer.offsetWidth;
-    
-    let numPixels = parseInt(prompt('Hi! Please enter the number of pixels you want in each side. \n Be careful, 100 is the max number you can enter.'),10);
+    let keepGoing = true;
+    let numPixels = '';
 
+    while(keepGoing){
+        numPixels = parseInt(prompt('Hi! Please enter the number of pixels you want in each side. \nBe careful, 100 is the max number you can enter.'),10);
+        if(isNaN(numPixels)== true){
+            alert('Please, enter a number.')
+        } else {
+            keepGoing = false;
+        }
+    }
+    
     if(numPixels > 100) numPixels = 100;
 
     let desiredVerticalEdge = numPixels;
