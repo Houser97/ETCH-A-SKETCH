@@ -2,8 +2,7 @@ const mainContainer = document.querySelector('.mainContainer');
 
 function createContainers(mainContainer) {
 
-    let heightMainCont = mainContainer.offsetHeight;
-    let widthMainCont = mainContainer.offsetWidth;
+
     let keepGoing = true;
     let numPixels = '';
 
@@ -20,6 +19,10 @@ function createContainers(mainContainer) {
 
     let desiredVerticalEdge = numPixels;
     let desiredHorizontalEdge = numPixels;
+
+
+    let heightMainCont = mainContainer.offsetHeight;
+    let widthMainCont = mainContainer.offsetWidth;
 
     let desiredArea = desiredHorizontalEdge * desiredVerticalEdge;
     let pixelHeight = heightMainCont/desiredVerticalEdge;
